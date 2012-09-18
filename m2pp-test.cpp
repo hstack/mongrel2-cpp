@@ -26,17 +26,8 @@ int main(int argc, char *argv[]) {
 		}
 
 		std::ostringstream response;
-		response << "<pre>" << std::endl;
-		response << "SENDER: " << req.sender << std::endl;
-		response << "IDENT: " << req.conn_id << std::endl;
-		response << "PATH: " << req.path << std::endl;
-		response << "BODY: " << req.body << std::endl;
-		for (std::vector<m2pp::header>::iterator it=req.headers.begin();it!=req.headers.end();it++) {
-			response << "HEADER: " << it->first << ": " << it->second << std::endl;
-		}
-		response << "</pre>" << std::endl;
 
-		std::cout << response.str();
+		//std::cout << response.str();
 
 		conn.reply_http(req, response.str());
 	}
