@@ -25,11 +25,12 @@ int main(int argc, char *argv[]) {
 			continue;
 		}
 
-		std::ostringstream response;
+		//std::ostringstream response;
+		//response << "OK" << std::endl;
 
 		//std::cout << response.str();
 
-		conn.reply_http(req, response.str());
+		conn.reply_http(req, "");
 	}
 
 	return 0;
